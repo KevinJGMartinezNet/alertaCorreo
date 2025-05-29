@@ -14,8 +14,8 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
   Este código no sirve a tiempo real, lo puedes cornometrar cada 15 minutos o 1 hora u etc, ya dependiendo de cada cuanto tiempo lo requieras, lo que hace el script es que busca en todos los archivos nuevos para poder detectar si se subió uno nuevo y manda el correo electrónico, en caso de que no exista ningún archivo no hace nada y no manda el correo.
 
 ## Fragmento de código donde hace la busqueda de información de los archivos
-
-``` JavaScript Este es el fragmento donde puedes extraer la información ya dependiendo si lo quieres para hacer un reporte y sacar la relación, para mandar correo como yo lo hice o etc.
+  Este es el fragmento donde puedes extraer la información ya dependiendo si lo quieres para hacer un reporte y sacar la relación, para mandar correo como yo lo hice o etc.
+``` JavaScript 
 
       function getAttachedFileIds(recordType, recordId){
         var results = search.create({
@@ -40,6 +40,4 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
             return !!f.id; 
         });
     } 
-
-
-Estos fueron la manera que pude encontrar para poder "solucionar esa problemática", los que están leyendo el post encontraron la manera de hacerlo mejor me encnataría saber sus comentarios.
+```
