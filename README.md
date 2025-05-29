@@ -13,4 +13,29 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
 ## SheduleScript
   Este código no sirve a tiempo real, lo puedes cornometrar cada 15 minutos o 1 hora u etc, ya dependiendo de cada cuanto tiempo lo requieras, lo que hace el script es que busca en todos los archivos nuevos para poder detectar si se subió uno nuevo y manda el correo electrónico, en caso de que no exista ningún archivo no hace nada y no manda el correo.
 
+## Fragmento de código donde hace la busqueda de información de los archivos
+
+  function getAttachedFileIds(recordType, recordId) {
+        var results = search.create({
+            type: recordType,
+            filters: [
+                ['internalid', 'anyof', recordId],
+                'AND',
+                ['mainline', 'is', 'T']
+            ],
+            columns: [
+                search.createColumn({ name: 'internalid', join: 'file' }),
+                search.createColumn({ name: 'name', join: 'file' })
+            ]
+        }).run().getRange({ start: 0, end: 100 });
+
+        return (results || []).map(function(result) {
+            return {
+                id: result.getValue({ name: 'internalid', join: 'file' }),
+                name: result.getValue({ name: 'name', join: 'file' })
+            };
+        }).filter(function(f) {
+            return !!f.id; 
+        });
+    }
 Estos fueron la manera que pude encontrar para poder "solucionar esa problemática", los que están leyendo el post encontraron la manera de hacerlo mejor me encnataría saber sus comentarios.
