@@ -15,6 +15,7 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
 
 ## Fragmento de código donde hace la busqueda de información de los archivos
 
+"``` JavaScript
   function getAttachedFileIds(recordType, recordId) {
         var results = search.create({
             type: recordType,
@@ -37,5 +38,7 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
         }).filter(function(f) {
             return !!f.id; 
         });
-    }
+    }  "
+
+
 Estos fueron la manera que pude encontrar para poder "solucionar esa problemática", los que están leyendo el post encontraron la manera de hacerlo mejor me encnataría saber sus comentarios.
