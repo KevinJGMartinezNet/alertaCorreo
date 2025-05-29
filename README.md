@@ -15,7 +15,7 @@ Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya
 
 ## Fragmento de código donde hace la busqueda de información de los archivos
 
-"``` JavaScript Este es el fragmento donde puedes extraer la información ya dependiendo si lo quieres para hacer un reporte y sacar la relación, para mandar correo como yo lo hice o etc."
+``` JavaScript Este es el fragmento donde puedes extraer la información ya dependiendo si lo quieres para hacer un reporte y sacar la relación, para mandar correo como yo lo hice o etc.
 
       function getAttachedFileIds(recordType, recordId){
         var results = search.create({
