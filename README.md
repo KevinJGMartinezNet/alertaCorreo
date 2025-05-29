@@ -7,3 +7,10 @@ Yo acepte pensando que sería muy sencillo hacer ese script, y estuve muy equivo
 Hasta que me puse manos a la obra, para poder ver si podía hacer ese Script, ya que lo necesitaban de manera urgente, de tanta investigación que hice encontré dos formas de hacerlo mediante un UserEventScript o ScheduledScript.
 
 
+## UserEventScript
+  Este código funciona cuando le ponen en editar el formulario y suben el archivo directamente desde Comunicación > Archivos al momento de poder guardar el formulario automáticamente les llegará un correo a los que hayas puesto dentro del Script y los archivos que se pusieron, ya que no encontré la manera de que funcione sin tener que editar el formulario, posiblemente si exista una manera pero actualmente no me fue posible.
+
+## SheduleScript
+  Este código no sirve a tiempo real, lo puedes cornometrar cada 15 minutos o 1 hora u etc, ya dependiendo de cada cuanto tiempo lo requieras, lo que hace el script es que busca en todos los archivos nuevos para poder detectar si se subió uno nuevo y manda el correo electrónico, en caso de que no exista ningún archivo no hace nada y no manda el correo.
+
+Estos fueron la manera que pude encontrar para poder "solucionar esa problemática", los que están leyendo el post encontraron la manera de hacerlo mejor me encnataría saber sus comentarios.
